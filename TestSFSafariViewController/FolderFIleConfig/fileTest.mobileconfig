@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HasRemovalPasscode</key>
+	<false/>
+	<key>PayloadContent</key>
+	<array>
+		
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>Icons for “App Store”</string>
+	<key>PayloadIdentifier</key>
+	<string>wg-3.49F976A5-B46C-46B2-A075-A2F61201829A</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>55A610C0-8A03-4333-B370-68D64EABE325</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

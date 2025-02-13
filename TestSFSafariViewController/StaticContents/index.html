@@ -1,14 +1,121 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    </head>
-    <body>
-        <h1>Bonjour, le monde!</h1>
-        <a href="/aaa/bbb/ccc">WebView request</a><br>
-        <br>
-        <a href="/aaa/bbb/ddd">WebView request 2</a><br>
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icon Packs</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        /* overflow: hidden; */
+        padding: 32px 20px;
+        text-align: center;
+      }
+      body h1 {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 33px;
+        line-height: 37px;
+      }
+      body section {
+        margin-bottom: 36px;
+      }
+      body section h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 4px;
+        line-height: 28px;
+      }
+      body section .desc {
+        font-size: 16px;
+        color: #aaa;
+        line-height: 22px;
+      }
+      body section .btn-wrap {
+        margin-top: 31px;
+      }
+      body section .btn-wrap .blue-btn {
+        font-size: 14px;
+        color: #fff;
+        background-color: #0290ff;
+        border: 0;
+        height: 34px;
+        border-radius: 17px;
+        padding-left: 25px;
+        padding-right: 25px;
+        outline: none;
+      }
+      body section .desc img {
+        width: 80%;
+        margin-bottom: -9px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Add Icon Packs to Desktop</h1>
+    <section>
+      <h3>Step 1</h3>
+      <div class="desc i18n">Download description file and click “Allow”</div>
+      <div class="btn-wrap">
+        <button class="blue-btn i18n" onclick="downloadAction()">
+          Download description file
+        </button>
+      </div>
+    </section>
+    <section>
+      <h3>Step 2</h3>
+      <div class="desc">
+        <div class="i18n">Enter the description file page,</div>
+        <div class="i18n">select the description file and click "Install".</div>
+      </div>
+      <div class="desc">
+        <img
+          src="https://keyboard-cdn.s3.amazonaws.com/picture/wallpaper/icon_html_img.png"
+        />
+      </div>
+      <div class="btn-wrap">
+        <button class="blue-btn i18n" onclick="gotoPage()">
+          Enter the description file page
+        </button>
+      </div>
+    </section>
+    <h1>Another method of installation that is complex in operation but with a high degree of freedom</h1>
+    <section>
+      <div class="desc i18n">If you want to open the app directly after clicking on the icon, you can try to associate it with a shortcut command, however, we recommend you to use the simple and fast way to download the description file.</div>
+      <div class="btn-wrap">
+        <button class="blue-btn i18n" onclick="downloadImage()">
+        Download the Icons Image
+        </button>
+      </div>
+    </section>
+    <script>
+      let onDownloadAction = false
+      function downloadAction() {
+        onDownloadAction = true
+        window.location = 'http://localhost:12321/fileTest_Clone.mobileconfig'
+      }
+      function gotoPage() {
+        if (!onDownloadAction) {
+          alert('Please complete step 1 to download the description file.')
+          return
+        }
+        window.location = `com.apple.preferences://`
+      }
+      function downloadImage() {
+      //    window.location = 'themepack-iconsave://'
+      }
+      function getParam(name) {
+        let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
+        let r = window.location.search.substr(1).match(reg)
+        if (r != null) return r[2]
+        return null
+      }
+    </script>
+  </body>
 </html>
-

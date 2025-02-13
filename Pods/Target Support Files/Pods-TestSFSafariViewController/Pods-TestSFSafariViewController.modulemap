@@ -1,0 +1,6 @@
+framework module Pods_TestSFSafariViewController {
+  umbrella header "Pods-TestSFSafariViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}
